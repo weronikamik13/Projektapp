@@ -1,0 +1,175 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="page-header">
+  <h1>Please fill the form</h1>
+</div>
+
+<form role="form" action="/save" method="post">
+    <h3>Personal data</h3>
+    <div class="form-group">
+        <label for="age">Age:</label>
+        <select class="form-control" id="age" name="age" required>
+		<option>18 - 20</option>
+        <option>21 -24</option>
+        <option>25 -30</option>
+        <option>31 - 35</option>
+		</select>
+	</div>
+	<div class="form-group">
+        <label for="sex">Sex:</label>
+        <select class="form-control" id="sex" name="sex" required>
+		<option>Female</option>
+        <option>Male</option>
+		</select>
+    </div>
+	
+    <h3>Employee Job Satisfaction</h3>
+    <div class="form-group">
+      <label for="income">Anal income $:</label>
+      <select class="form-control" id="income" name="income">
+        <option>20</option>
+        <option>50</option>
+        <option>100</option>
+        <option>150</option>
+      </select>
+    </div>
+    <div class="form-group">
+        <label for="satisfaction">Considering everything, how satisfied are you with your job?</label>
+        <input type="number" class="form-control" id="satisfaction" name="satisfaction" min="1" max="5" required>
+    </div>
+
+    <h3>One-choice questions</h3>
+    <b>What will you appreciate the most in your future work?</b>
+    <div class="form-group">
+        <label class="radio-inline">
+          <input type="radio" name="q1" value="1">Independence in decision making
+        </label><br>
+        <label class="radio-inline">
+          <input type="radio" name="q1" value="2">Opportunity to develop a career
+        </label><br>
+        <label class="radio-inline">
+          <input type="radio" name="q1" value="3">Friendly relations among employees
+        </label><br>
+        <label class="radio-inline">
+          <input type="radio" name="q1" value="4">Social benefits
+        </label><br>
+    </div>
+    <b>I'm certain that I will have influence on the company's success</b>
+    <div class="form-group">
+        <label class="radio-inline">
+          <input type="radio" name="q2" value="1">Yes
+        </label><br>
+        <label class="radio-inline">
+          <input type="radio" name="q2" value="2">Rather yes
+        </label><br>
+        <label class="radio-inline">
+          <input type="radio" name="q2" value="3">I have no opinion
+        </label><br>
+        <label class="radio-inline">
+          <input type="radio" name="q2" value="4">Rather no
+        </label><br>
+		<label class="radio-inline">
+          <input type="radio" name="q2" value="5">No
+        </label><br>
+    </div>
+	
+	<h3>Multi-choice questions</h3>
+	<b>What factors do you consider as demotivating at work?</b>
+    <div class="form-group">
+        <label class="radio-inline">
+          <input type="checkbox" name="q3" value="1"> Unclear differentation of job duties
+        </label><br>
+        <label class="radio-inline">
+          <input type="checkbox" name="q3" value="2"> Too much work
+        </label><br>
+        <label class="radio-inline">
+          <input type="checkbox" name="q3" value="3"> Not enough work
+        </label><br>
+        <label class="radio-inline">
+          <input type="checkbox" name="q3" value="4"> Unfriendly atmosphere
+        </label><br>
+		<label class="radio-inline">
+          <input type="checkbox" name="q3" value="5"> Lack of possibility to develop your career
+        </label><br>
+    </div>
+
+	<b>Which of the below statements connected with wireless network are you familiar with?</b>
+    <div class="form-group">
+        <label class="radio-inline">
+          <input type="checkbox" name="q3" value="1"> LTE L1
+        </label><br>
+        <label class="radio-inline">
+          <input type="checkbox" name="q3" value="2"> 5G
+        </label><br>
+        <label class="radio-inline">
+          <input type="checkbox" name="q3" value="3"> Signal Processing
+        </label><br>
+        <label class="radio-inline">
+          <input type="checkbox" name="q3" value="4"> Radio Engineering
+        </label><br>
+    </div>
+	
+	<b>Which of the programming language do you know/do you work with?</b>
+    <div class="form-group">
+        <label class="radio-inline">
+          <input type="checkbox" name="q3" value="1"> C++
+        </label><br>
+        <label class="radio-inline">
+          <input type="checkbox" name="q3" value="2"> C
+        </label><br>
+        <label class="radio-inline">
+          <input type="checkbox" name="q3" value="3"> Python
+        </label><br>
+        <label class="radio-inline">
+          <input type="checkbox" name="q3" value="4"> Java
+        </label><br>
+        <label class="radio-inline">
+          <input type="checkbox" name="q3" value="5"> Matlab/Simulink
+        </label><br>
+        <label class="radio-inline">
+          <input type="checkbox" name="q3" value="6"> VHDL
+        </label><br>
+        <label class="radio-inline">
+          <input type="checkbox" name="q3" value="7"> System Verilog
+        </label><br>
+        <label class="radio-inline">
+          <input type="checkbox" name="q3" value="8"> SQL
+        </label><br>
+        <label class="radio-inline">
+          <input type="checkbox" name="q3" value="9"> HTML
+        </label><br>
+        <label class="radio-inline">
+          <input type="checkbox" name="q3" value="10"> Java Script
+        </label><br>
+        <label class="radio-inline">
+          <input type="checkbox" name="q3" value="11"> PHP
+        </label><br>
+        <label class="radio-inline">
+          <input type="checkbox" name="q3" value="12"> LabVIEW
+        </label><br>
+    </div>
+	
+	<b>Which of the laboratory equipment do you work with?</b>
+    <div class="form-group">
+        <label class="radio-inline">
+          <input type="checkbox" name="q3" value="1"> Oscilloscope
+        </label><br>
+        <label class="radio-inline">
+          <input type="checkbox" name="q3" value="2"> Signal Generator
+        </label><br>
+        <label class="radio-inline">
+          <input type="checkbox" name="q3" value="3"> Multimeter
+        </label><br>
+        <label class="radio-inline">
+          <input type="checkbox" name="q3" value="4"> Spectrum Analyser
+        </label><br>
+    </div>
+	
+    <button type="submit" class="btn btn-default">Save</button>
+</form>
+
+{% endblock %}
+
