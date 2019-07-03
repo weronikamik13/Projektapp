@@ -3,24 +3,787 @@
 
 {% block content %}
 
-<div class="page-header">
-    <h1>Results</h1>
-    <div id="chart_div"> </div>
-</div>
-
+<!-- <div class="page-header"> -->
+    <!-- <h1>Results</h1> -->
+    <!-- <div id="chart_div"> </div> -->
+	<!-- <br><br><br> -->
+	<!-- <h1>Dupa</h1><br> -->
+	<!-- <div id="chart_div2"> </div> -->
+<!-- </div> -->
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript">
   google.load('visualization', '1', {'packages':['corechart']});
   google.setOnLoadCallback(drawChart);
-  function drawChart() {
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Question');
-    data.addColumn('number', 'Average answer');
-    data.addRows( {{ data|tojson }} );
-    var chart = new google.visualization.ColumnChart(
-            document.getElementById('chart_div'));
-    chart.draw(data, {legend: 'none', vAxis: {baseline: 0} });
+  function drawChart() 
+  {
+	
+	var data1 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+       {{data1|tojson}},
+       {{data2|tojson}},
+       {{data3|tojson}},
+	   {{data4|tojson}},
+	   {{data5|tojson}},
+      ],
+      false);
+	
+	var data2 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data6|tojson}},
+	   {{data7|tojson}},
+	   {{data8|tojson}},
+	   {{data9|tojson}},
+	   {{data10|tojson}},
+      ],
+      false);
+	
+	var data3 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data11|tojson}},
+	   {{data12|tojson}},
+	   {{data13|tojson}},
+	   {{data14|tojson}},
+	   {{data15|tojson}},
+      ],
+      false);
+	  
+	var data4 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data16|tojson}},
+	   {{data17|tojson}},
+	   {{data18|tojson}},
+	   {{data19|tojson}},
+	   {{data20|tojson}},
+      ],
+      false);  
+	  
+	var data5 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data21|tojson}},
+	   {{data22|tojson}},
+	   {{data23|tojson}},
+	   {{data24|tojson}},
+	   {{data25|tojson}},
+      ],
+      false);   
+	
+	var data7 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data31|tojson}},
+	   {{data32|tojson}},
+	   {{data33|tojson}},
+	   {{data34|tojson}},
+	   {{data35|tojson}},
+      ],
+      false);     
+	  
+	var data8 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data36|tojson}},
+	   {{data37|tojson}},
+	   {{data38|tojson}},
+	   {{data39|tojson}},
+	   {{data40|tojson}},
+      ],
+      false);       
+	
+	var data9 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data41|tojson}},
+	   {{data42|tojson}},
+	   {{data43|tojson}},
+	   {{data44|tojson}},
+	   {{data45|tojson}},
+      ],
+      false);      
+
+	var data10 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data46|tojson}},
+	   {{data47|tojson}},
+	   {{data48|tojson}},
+	   {{data49|tojson}},
+	   {{data50|tojson}},
+      ],
+      false);      	
+	
+	var data12 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data56|tojson}},
+	   {{data57|tojson}},
+	   {{data58|tojson}},
+	   {{data59|tojson}},
+	   {{data60|tojson}},
+      ],
+      false);      	  
+	
+	var data13 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data61|tojson}},
+	   {{data62|tojson}},
+	   {{data63|tojson}},
+	   {{data64|tojson}},
+	   {{data65|tojson}},
+      ],
+      false);      	 
+	  
+	var data14 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data66|tojson}},
+	   {{data67|tojson}},
+	   {{data68|tojson}},
+	   {{data69|tojson}},
+	   {{data70|tojson}},
+      ],
+      false);      	 
+	
+	var data15 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data71|tojson}},
+	   {{data72|tojson}},
+	   {{data73|tojson}},
+	   {{data74|tojson}},
+	   {{data75|tojson}},
+      ],
+      false);      	 
+	  
+	var data16 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data77|tojson}},
+	   {{data78|tojson}},
+	   {{data79|tojson}},
+	   {{data80|tojson}},
+	   {{data81|tojson}},
+      ],
+      false);      	 
+
+	var data17 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data82|tojson}},
+	   {{data83|tojson}},
+	   {{data84|tojson}},
+	   {{data85|tojson}},
+	   {{data86|tojson}},
+      ],
+      false);      	   
+	
+	var data18 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data87|tojson}},
+	   {{data88|tojson}},
+	   {{data89|tojson}},
+	   {{data90|tojson}},
+	   {{data91|tojson}},
+      ],
+      false);      	 
+	  
+	var data19 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data92|tojson}},
+	   {{data93|tojson}},
+	   {{data94|tojson}},
+	   {{data95|tojson}},
+	   {{data96|tojson}},
+      ],
+      false);      	 
+
+	var data20 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data97|tojson}},
+	   {{data98|tojson}},
+	   {{data99|tojson}},
+	   {{data100|tojson}},
+	   {{data101|tojson}},
+      ],
+      false);      	 
+
+	var data21 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data102|tojson}},
+	   {{data103|tojson}},
+	   {{data104|tojson}},
+	   {{data105|tojson}},
+	   {{data106|tojson}},
+      ],
+      false);      	 
+
+	var data22 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data107|tojson}},
+	   {{data108|tojson}},
+	   {{data109|tojson}},
+	   {{data110|tojson}},
+	   {{data111|tojson}},
+      ],
+      false);      	 
+
+	var data23 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data112|tojson}},
+	   {{data113|tojson}},
+	   {{data114|tojson}},
+	   {{data115|tojson}},
+	   {{data116|tojson}},
+      ],
+      false);      	 
+
+	var data24 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data117|tojson}},
+	   {{data118|tojson}},
+	   {{data119|tojson}},
+	   {{data120|tojson}},
+	   {{data121|tojson}},
+      ],
+      false);      	 
+
+	var data25 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data122|tojson}},
+	   {{data123|tojson}},
+	   {{data124|tojson}},
+	   {{data125|tojson}},
+	   {{data126|tojson}},
+      ],
+      false);      	 
+
+	var data26 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data127|tojson}},
+	   {{data128|tojson}},
+	   {{data129|tojson}},
+	   {{data130|tojson}},
+	   {{data131|tojson}},
+      ],
+      false);      	 
+
+	var data27 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data132|tojson}},
+	   {{data133|tojson}},
+	   {{data134|tojson}},
+	   {{data135|tojson}},
+	   {{data136|tojson}},
+      ],
+      false);      	 
+
+	var data28 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data137|tojson}},
+	   {{data138|tojson}},
+	   {{data139|tojson}},
+	   {{data140|tojson}},
+	   {{data141|tojson}},
+      ],
+      false);      	 
+
+	var data29 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data142|tojson}},
+	   {{data143|tojson}},
+	   {{data144|tojson}},
+	   {{data145|tojson}},
+	   {{data146|tojson}},
+      ],
+      false);      	   
+	
+	var data30 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data1|tojson}},
+	   {{data6|tojson}},
+	   {{data11|tojson}},
+	   {{data16|tojson}},
+	   {{data21|tojson}},
+	   {{data31|tojson}},
+	   {{data36|tojson}},
+	   {{data41|tojson}},
+	   {{data46|tojson}},
+	   {{data56|tojson}},
+      ],
+      false);      	
+
+	var data31 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data61|tojson}},
+	   {{data66|tojson}},
+	   {{data71|tojson}},
+	   {{data77|tojson}},
+	   {{data82|tojson}},
+	   {{data87|tojson}},
+	   {{data92|tojson}},
+	   {{data97|tojson}},
+      ],
+      false);      	 
+	 
+	var data32 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data102|tojson}},
+	   {{data107|tojson}},
+	   {{data112|tojson}},
+	   {{data117|tojson}},
+	   {{data122|tojson}},
+	   {{data127|tojson}},
+	   {{data132|tojson}},
+	   {{data137|tojson}},
+	   {{data142|tojson}},
+      ],
+      false);      	  
+	 
+	var data33 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data2|tojson}},
+	   {{data7|tojson}},
+	   {{data12|tojson}},
+	   {{data17|tojson}},
+	   {{data22|tojson}},
+	   {{data32|tojson}},
+	   {{data37|tojson}},
+	   {{data42|tojson}},
+	   {{data47|tojson}},
+	   {{data57|tojson}},
+      ],
+      false);      	   
+	
+	var data34 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data62|tojson}},
+	   {{data67|tojson}},
+	   {{data72|tojson}},
+	   {{data78|tojson}},
+	   {{data83|tojson}},
+	   {{data88|tojson}},
+	   {{data93|tojson}},
+	   {{data98|tojson}},
+      ],
+      false);      	   
+	
+	var data35 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data103|tojson}},
+	   {{data108|tojson}},
+	   {{data113|tojson}},
+	   {{data118|tojson}},
+	   {{data123|tojson}},
+	   {{data128|tojson}},
+	   {{data133|tojson}},
+	   {{data138|tojson}},
+	   {{data143|tojson}},
+      ],
+      false);      	   
+	
+	var data36 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data3|tojson}},
+	   {{data8|tojson}},
+	   {{data13|tojson}},
+	   {{data18|tojson}},
+	   {{data23|tojson}},
+	   {{data33|tojson}},
+	   {{data38|tojson}},
+	   {{data43|tojson}},
+	   {{data48|tojson}},
+	   {{data58|tojson}},
+      ],
+      false);      	   
+	
+	var data37 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data63|tojson}},
+	   {{data68|tojson}},
+	   {{data73|tojson}},
+	   {{data79|tojson}},
+	   {{data84|tojson}},
+	   {{data89|tojson}},
+	   {{data94|tojson}},
+	   {{data99|tojson}},
+      ],
+      false);      	   
+	
+	var data38 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data104|tojson}},
+	   {{data109|tojson}},
+	   {{data114|tojson}},
+	   {{data119|tojson}},
+	   {{data124|tojson}},
+	   {{data129|tojson}},
+	   {{data134|tojson}},
+	   {{data139|tojson}},
+	   {{data144|tojson}},
+      ],
+      false);      	   
+	
+	var data39 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data4|tojson}},
+	   {{data9|tojson}},
+	   {{data14|tojson}},
+	   {{data19|tojson}},
+	   {{data24|tojson}},
+	   {{data34|tojson}},
+	   {{data39|tojson}},
+	   {{data44|tojson}},
+	   {{data49|tojson}},
+	   {{data59|tojson}},
+      ],
+      false);      	   
+	
+	var data40 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data64|tojson}},
+	   {{data69|tojson}},
+	   {{data74|tojson}},
+	   {{data80|tojson}},
+	   {{data85|tojson}},
+	   {{data90|tojson}},
+	   {{data95|tojson}},
+	   {{data100|tojson}},
+      ],
+      false);      	   
+	  
+	var data41 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data105|tojson}},
+	   {{data110|tojson}},
+	   {{data115|tojson}},
+	   {{data120|tojson}},
+	   {{data125|tojson}},
+	   {{data130|tojson}},
+	   {{data135|tojson}},
+	   {{data140|tojson}},
+	   {{data145|tojson}},
+      ],
+      false);      	     
+	
+	var data42 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data5|tojson}},
+	   {{data10|tojson}},
+	   {{data15|tojson}},
+	   {{data20|tojson}},
+	   {{data25|tojson}},
+	   {{data35|tojson}},
+	   {{data40|tojson}},
+	   {{data45|tojson}},
+	   {{data50|tojson}},
+	   {{data60|tojson}},
+      ],
+      false);      	   
+	
+	var data43 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data65|tojson}},
+	   {{data70|tojson}},
+	   {{data75|tojson}},
+	   {{data81|tojson}},
+	   {{data86|tojson}},
+	   {{data91|tojson}},
+	   {{data96|tojson}},
+	   {{data101|tojson}},
+	   
+      ],
+      false);      	   
+	  
+	var data44 = google.visualization.arrayToDataTable([
+       ['Question','Average answer', {role: 'style'}],
+	   {{data106|tojson}},
+	   {{data111|tojson}},
+	   {{data116|tojson}},
+	   {{data121|tojson}},
+	   {{data126|tojson}},
+	   {{data131|tojson}},
+	   {{data136|tojson}},
+	   {{data141|tojson}},
+	   {{data146|tojson}},
+      ],
+      false);      	     
+	
+	var options = {
+	//align:'center', 
+	legend: 'none', 
+	width:'900', 
+	height:'300',
+	vAxis: {baseline: 0},
+	};
+	
+	var options2 = {
+	//align:'center', 
+	legend: 'none', 
+	width:'1200', 
+	height:'400',
+	vAxis: {baseline: 0},
+	};
+	
+	var chart = new google.visualization.ColumnChart(
+           document.getElementById('chart_div'));
+   chart.draw(data1, options);
+   
+   var chart2 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div2'));
+   chart2.draw(data2, options);
+   
+   var chart3 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div3'));
+   chart3.draw(data3, options);
+   
+   var chart4 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div4'));
+   chart4.draw(data4, options);
+   
+   var chart5 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div5'));
+   chart5.draw(data5, options);
+   
+   var chart7 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div7'));
+   chart7.draw(data7, options);
+   
+   var chart8 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div8'));
+   chart8.draw(data8, options);
+   
+   var chart9 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div9'));
+   chart9.draw(data9, options);
+   
+   var chart10 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div10'));
+   chart10.draw(data10, options);
+   
+   var chart12 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div12'));
+   chart12.draw(data12, options);
+   
+   var chart13 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div13'));
+   chart13.draw(data13, options);
+   
+   var chart14 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div14'));
+   chart14.draw(data14, options);
+   
+   var chart15 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div15'));
+   chart15.draw(data15, options);
+   
+   var chart16 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div16'));
+   chart16.draw(data16, options);
+   
+   var chart17 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div17'));
+   chart17.draw(data17, options);
+   
+   var chart18 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div18'));
+   chart18.draw(data18, options);
+   
+   var chart19 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div19'));
+   chart19.draw(data19, options);
+   
+   var chart20 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div20'));
+   chart20.draw(data20, options);
+   
+   var chart21 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div21'));
+   chart21.draw(data21, options);
+   
+   var chart22 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div22'));
+   chart22.draw(data22, options);
+   
+   var chart23 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div23'));
+   chart23.draw(data23, options);
+   
+   var chart24 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div24'));
+   chart24.draw(data24, options);
+   
+   var chart25 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div25'));
+   chart25.draw(data25, options);
+   
+   var chart26 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div26'));
+   chart26.draw(data26, options);
+   
+   var chart27 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div27'));
+   chart27.draw(data27, options);
+   
+   var chart28 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div28'));
+   chart28.draw(data28, options);
+   
+   var chart29 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div29'));
+   chart29.draw(data29, options);
+   
+   var chart30 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div30'));
+   chart30.draw(data30, options2);
+   
+   var chart31 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div31'));
+   chart31.draw(data31, options2);
+   
+   var chart32 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div32'));
+   chart32.draw(data32, options2);
+   
+   var chart33 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div33'));
+   chart33.draw(data33, options2);
+   
+   var chart34 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div34'));
+   chart34.draw(data34, options2);
+   
+   var chart35 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div35'));
+   chart35.draw(data35, options2);
+   
+   var chart36 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div36'));
+   chart36.draw(data36, options2);
+   
+   var chart37 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div37'));
+   chart37.draw(data37, options2);
+   
+   var chart38 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div38'));
+   chart38.draw(data38, options2);
+   
+   var chart39 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div39'));
+   chart39.draw(data39, options2);
+   
+   var chart40 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div40'));
+   chart40.draw(data40, options2);
+   
+   var chart41 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div41'));
+   chart41.draw(data41, options2);
+   
+   var chart42 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div42'));
+   chart42.draw(data42, options2);
+   
+   var chart43 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div43'));
+   chart43.draw(data43, options2);
+   
+   var chart44 = new google.visualization.ColumnChart(
+          document.getElementById('chart_div44'));
+   chart44.draw(data44, options2);
+	
   }
+  
 </script>
+
+
+<body>
+        <h2>Division of data into categories</h2>
+        <h3>C++</h3>
+		<div id="chart_div"></div>
+		<h3>C</h3>
+        <div id="chart_div2"></div>
+        <h3>Python</h3>
+		<div id="chart_div3"></div>
+		<h3>PHP</h3>
+		<div id="chart_div4"></div>
+		<h3>Labview</h3>
+        <div id="chart_div5"></div>
+		<h3>Matlab/Simulink</h3>
+		<div id="chart_div7"></div>
+		<h3>SQL</h3>
+        <div id="chart_div8"></div>
+        <h3>HTML</h3>
+		<div id="chart_div9"></div>
+		<h3>Java Script</h3>
+		<div id="chart_div10"></div>
+        <h3>Java</h3>
+		<div id="chart_div12"></div>
+        <h3>Teamwork</h3>
+		<div id="chart_div13"></div>
+		<h3>Communication skills</h3>
+        <div id="chart_div14"></div>
+        <h3>Time management</h3>
+		<div id="chart_div15"></div>
+		<h3>Risk taking</h3>
+		<div id="chart_div16"></div>
+		<h3>Fast decision making</h3>
+        <div id="chart_div17"></div>
+        <h3>Leadership</h3>
+		<div id="chart_div18"></div>
+		<h3>Cultural intelligence</h3>
+		<div id="chart_div19"></div>
+		<h3>Presenting in front of an audience</h3>
+        <div id="chart_div20"></div>
+        <h3>English</h3>
+		<div id="chart_div21"></div>
+		<h3>German</h3>
+		<div id="chart_div22"></div>
+		<h3>French</h3>
+        <div id="chart_div23"></div>
+        <h3>Spanish</h3>
+		<div id="chart_div24"></div>
+		<h3>Russian</h3>
+		<div id="chart_div25"></div>
+		<h3>Italian</h3>
+        <div id="chart_div26"></div>
+        <h3>Chinese</h3>
+		<div id="chart_div27"></div>
+		<h3>Japanese</h3>
+		<div id="chart_div28"></div>
+		<h3>Arabian</h3>
+        <div id="chart_div29"></div>
+        
+		
+		<h2>Division of data into age groups</h2>
+		<br>
+		<h3>18 - 20</h3>
+		<h4>Programming languages</h4>
+		<div id="chart_div30"></div>
+		<h4>Capabilities</h4>
+		<div id="chart_div31"></div>
+		<h4>Foreign languages</h4>
+		<div id="chart_div32"></div>
+		<h3>21 - 25</h3>
+        <h4>Programming languages</h4>
+		<div id="chart_div33"></div>
+		<h4>Capabilities</h4>
+		<div id="chart_div34"></div>
+		<h4>Foreign languages</h4>
+		<div id="chart_div35"></div>
+        <h3>26 - 30</h3>
+		<h4>Programming languages</h4>
+		<div id="chart_div36"></div>
+		<h4>Capabilities</h4>
+		<div id="chart_div37"></div>
+		<h4>Foreign languages</h4>
+		<div id="chart_div38"></div>
+		<h3>31 - 40</h3>
+		<h4>Programming languages</h4>
+		<div id="chart_div39"></div>
+		<h4>Capabilities</h4>
+		<div id="chart_div40"></div>
+		<h4>Foreign languages</h4>
+		<div id="chart_div41"></div>
+		<h3>Over 40</h3>
+        <h4>Programming languages</h4>
+		<div id="chart_div42"></div>
+		<h4>Capabilities</h4>
+		<div id="chart_div43"></div>
+		<h4>Foreign languages</h4>
+		<div id="chart_div44"></div>
+		
+		
+      </body>
 
 {% endblock %}
