@@ -10,3 +10,6 @@ statistics==1.0.3.5
 virtualenv==16.0.0
 Werkzeug==0.15.4
 gunicorn==19.9.0
+alembic==1.0.11
+Flask-Migrate==2.5.2
+psycopg2==2.8.3
