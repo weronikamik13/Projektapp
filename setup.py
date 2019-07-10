@@ -13,7 +13,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = 'False'
 db.init_app(app)
 
     
-3db = SQLAlchemy(app)
+#db = SQLAlchemy(app)
 
 class Formdata(db.Model):
     __tablename__ = 'formdata'
