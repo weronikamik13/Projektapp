@@ -8,10 +8,15 @@ Welcome to the Web Application project which the purpose was creation the survey
 ## Authors of the project
 
 Adamczyk Małgorzata- Computer Science and Medical Electonics
+
 Foltyn Jan - Computer Science and Medical Electonics
+
 Mędrala Radosław - Computer Science and Medical Electonics
+
 Mikos Weronika -  Computer Science and Medical Electonics
+
 Pawłowska Emilia - Biomechanics and Robotics
+
 Aleksandra Pietrucha - Biomechanics and Robotics
 
 
